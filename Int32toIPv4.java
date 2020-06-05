@@ -9,9 +9,31 @@ package com.codewars;
 //
 //Complete the function that takes an unsigned 32 bit number and returns a string representation of its IPv4 address.
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Int32toIPv4 {
     public static String longToIP(long ip) {
-        // Java doesn't have uint32, so here we use long
-        return ""; // do it!
+        // Arrancamos con un default por si el input es 0
+        String[] resultado = {"0", "0", "0", "0"};
+
+        String binary = Long.toBinaryString(ip);
+        // Nos aseguramos de que tenga los 32 bits antes de parsearlo
+        binary = (binary.length() == 32) ? binary :
+                String.format("%1$" + 32 + "s", binary).replace(' ', '0');
+
+        // Hacemos magia Regex y rompemos en octetos el input convertido a binario
+        List<String> octates = Arrays.asList(binary
+                .split("(?<=\\G.{" + 8 + "})")); // Regex vudú
+        // Los valores que correspondan los appendeamos inversamente en la lista y la returneamos joineando con puntos :)
+        for (int i = octates.size()-1; i >= 0; i--)
+            resultado[i] = String.valueOf(Integer.parseInt(octates.get(i), 2));
+
+        return String.join(".", resultado);
     }
 }
+
+// Las soluciones en CodeWars son cada vez mas irreales:
+// public static String longToIP(long ip) {
+//    return String.format("%d.%d.%d.%d", ip>>>24, (ip>>16)&0xff, (ip>>8)&0xff, ip&0xff);
+//  }
