@@ -1,4 +1,4 @@
-package com.codewars;
+package com.codewars.Java;
 
 // If you're faced with an input box, like this:
 //

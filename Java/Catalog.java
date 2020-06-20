@@ -1,4 +1,4 @@
-package com.codewars;
+package com.codewars.Java;
 
 // You are given a small extract of a catalog:
 //

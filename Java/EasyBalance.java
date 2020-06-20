@@ -1,4 +1,4 @@
-package com.codewars;
+package com.codewars.Java;
 
 // You are given a (small) check book as a - sometimes - cluttered (by non-alphanumeric characters) string:
 //  "1000.00

@@ -1,4 +1,4 @@
-package com.codewars;
+package com.codewars.Java;
 
 // Simple transposition is a basic and simple cryptography technique.
 // We make 2 rows and put first a letter in the Row 1, the second in the Row 2, third in Row 1 and so on until the end.

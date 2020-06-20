@@ -1,4 +1,4 @@
-package com.codewars;
+package com.codewars.Java;
 
 // Create a function that takes a positive integer and returns the next bigger number that can be formed by rearranging its digits. For example:
 // 513 ==> 531

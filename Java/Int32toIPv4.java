@@ -1,4 +1,4 @@
-package com.codewars;
+package com.codewars.Java;
 
 // Take the following IPv4 address: 128.32.10.1
 // This address has 4 octets where each octet is a single byte (or 8 bits).
