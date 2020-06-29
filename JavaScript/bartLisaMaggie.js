@@ -30,6 +30,8 @@ function list(names) {
   }
 }
 
+console.log(list([{ name: "Rami" }, { name: "Emi" }, { name: "Yair" }]));
+
 // Mejor respuesta de CodeWars:
 // function list(names) {
 //     var xs = names.map(p => p.name)
