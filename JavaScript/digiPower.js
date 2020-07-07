@@ -16,16 +16,15 @@
 function digPow(n, p) {
   let digitos = n.toString();
   let sumaDePotencias = 0;
-  // Elevamos recursivamente los digitos de n por p
+
   for (let i = 0; i < digitos.length; i++) {
     sumaDePotencias += digitos.charAt(i) ** p++;
   }
-  // Chequeamos que la suma de potencias dividido N sea entero, en ese caso lo devolvemos
+
   return (sumaDePotencias / n) % 1 === 0 ? sumaDePotencias / n : -1;
 }
 
-// Mejor respuesta de CodeWars:
-// Si, es mejor usar un split y hacer o un map o un reduce T_T
+// Best answer in CodeWars:
 // function digPow(n, p) {
 //     var x = String(n).split("").reduce((s, d, i) => s + Math.pow(d, p + i), 0)
 //     return x % n ? -1 : x / n

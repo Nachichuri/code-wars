@@ -27,7 +27,7 @@ function toWeirdCase(string) {
   return result.join("");
 }
 
-// Mejor solucion en CodeWars:
+// Best answer in CodeWars:
 // function toWeirdCase(string){
 //     return string.split(' ').map(function(word){
 //       return word.split('').map(function(letter, index){

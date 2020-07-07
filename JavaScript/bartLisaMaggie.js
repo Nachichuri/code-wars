@@ -12,7 +12,7 @@
 // Note: all the hashes are pre-validated and will only contain A-Z, a-z, '-' and '.'.
 
 function list(names) {
-  // Hoy tenía ganas de usar Switch case
+  // Switch case time :)
   switch (names.length) {
     case 0:
       return "";
@@ -30,12 +30,9 @@ function list(names) {
   }
 }
 
-console.log(list([{ name: "Rami" }, { name: "Emi" }, { name: "Yair" }]));
-
-// Mejor respuesta de CodeWars:
+// Best answer in CodeWars:
 // function list(names) {
 //     var xs = names.map(p => p.name)
 //     var x = xs.pop()
 //     return xs.length ? xs.join(", ") + " & " + x : x || ""
 //   }
-// Despues de hacerlo me di cuenta de que el default case solo puede resolver toda la función, pero switch ftw

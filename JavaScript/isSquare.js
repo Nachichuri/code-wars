@@ -13,12 +13,11 @@
 // isSquare(3) returns   false
 
 var isSquare = function (n) {
-  // Chequeamos si la raiz cuadrada es un entero, en ese caso es un cuadrado perfecto
   return Math.sqrt(n) % 1 === 0 ? true : false;
 };
 
-// Mejor respuesta en CodeWars:
-// No es necesario el ternary operator ya que la misma evaluacion devuelve true o false :facepalm:
+// Best answer in CodeWars:
+// Ternary operator not really needed :facepalm:
 // function isSquare(n) {
 //     return Math.sqrt(n) % 1 === 0;
 //   }

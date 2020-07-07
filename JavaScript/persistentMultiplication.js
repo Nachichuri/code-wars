@@ -9,23 +9,21 @@
 // persistence(4) === 0 // because 4 is already
 
 function persistence(num) {
+  if (String(num).length === 1) return 0;
 
-    if (String(num).length === 1) 
-        return 0;
+  let counter = 0;
+  let result = num;
+  let digitos = String(num).split("").map(Number);
 
-    let counter = 0
-    let result = num
-    let digitos = String(num).split('').map(Number)
-
-    while (String(result).length > 1) {
-        result = digitos.reduce((a, b) => a * b, 1)
-        digitos = String(result).split('').map(Number)
-        counter += 1
-    }
-    return counter
+  while (String(result).length > 1) {
+    result = digitos.reduce((a, b) => a * b, 1);
+    digitos = String(result).split("").map(Number);
+    counter += 1;
+  }
+  return counter;
 }
 
-// Mejor respuesta en CodeWars:
+// Best answer in CodeWars:
 //
 // var times = 0;
 //

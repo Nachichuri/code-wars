@@ -12,13 +12,12 @@
 // ]
 
 function towerBuilder(nFloors) {
-  // Creamos la base del arbol y el array
   let base = "*".repeat(nFloors * 2 - 1);
   let arbol = [base];
 
   for (let i = 0; i < nFloors; i++) {
     if (base.replace(/[^*]/g, "").length === 1) break;
-    // Reemplazamos los * por espacios en la primera y ultima ubicación
+
     base =
       base.substring(0, base.indexOf("*")) +
       " " +
@@ -27,7 +26,7 @@ function towerBuilder(nFloors) {
       base.substring(0, base.lastIndexOf("*")) +
       " " +
       base.substring(base.lastIndexOf("*") + 1);
-    // Y agregamos al principio del array
+
     arbol.unshift(base);
   }
 
@@ -36,7 +35,7 @@ function towerBuilder(nFloors) {
 
 console.log(towerBuilder(99));
 
-// Mejor solución de CodeWars:
+// Best answer in CodeWars:
 //  return Array.from({length: n}, function(v, k) {
 //     const spaces = ' '.repeat(n - k - 1);
 //     return spaces + '*'.repeat(k + k + 1) + spaces;

@@ -9,26 +9,10 @@
 // tickets([25, 100]) // => NO. Vasya will not have enough money to give change to 100 dollars
 // tickets([25, 25, 50, 50, 100]) // => NO. Vasya will not have the right bills to give 75 dollars
 
-// function tickets(peopleInLine) {
-//   let billetesDe25 = 0;
-//   // Agregamos al contador los de 25 y retamos si son mayores
-//   for (let billete of peopleInLine) {
-//     if (billete === 25) billetesDe25 += 1;
-//     else billetesDe25 -= billete / 25 - 1;
-//   }
-//   console.log(billetesDe25);
-//   // Nos fijamos si el balance da positivo o al menos 0
-//   //return billetesDe25 >= 0 ? "YES" : "NO";
-// }
-
-// console.log(
-//   tickets([25, 25, 25, 100, 25, 50, 25, 100, 25, 25, 50, 100, 25, 25, 25, 100])
-// );
-
 function tickets(peopleInLine) {
   let billetes25 = 0;
   let billetes50 = 0;
-  // Bienvenide al cielo de los ternary operators
+
   for (let billete of peopleInLine) {
     switch (billete) {
       case 25:
@@ -54,8 +38,7 @@ function tickets(peopleInLine) {
   return "YES";
 }
 
-// Mejor respuesta de CodeWars:
-// Me parece interesante armar un objeto con los billetes, mucho más OOP friendly
+// Best answer in CodeWars:
 // function Clerk(name) {
 //     this.name = name;
 

@@ -8,10 +8,8 @@
 // ['a','b','c','d','f'] -> 'e' ['O','Q','R','S'] -> 'P'
 
 function findMissingLetter(array) {
-  // Se puede resolver usando el codigo de cada char
-  // Pasamos a un String para poder iterar sobre los chars
   var arrayString = array.join("");
-  // Restamos el unicode de cada item al item siguiente, y en caso de que no sea el sigueinte devolvemos como stirng el char correpsondiente
+
   for (let i = 0; i < arrayString.length; i++)
     if (arrayString.charCodeAt(i + 1) - arrayString.charCodeAt(i) != 1)
       return String.fromCharCode(arrayString.charCodeAt(i) + 1);
@@ -19,7 +17,7 @@ function findMissingLetter(array) {
 
 console.log(findMissingLetter(["a", "b", "c", "d", "f"]));
 
-// Mejor respuesta en CodeWars:
+// Best answer in CodeWars:
 // Un poco más elegante:
 // var i=array[0].charCodeAt();
 // array.map(x=>  x.charCodeAt()==i?i++:i);
